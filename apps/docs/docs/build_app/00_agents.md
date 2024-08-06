@@ -6,7 +6,7 @@ Agents are the core building blocks of your Palico App. Agents are just an encap
 To build an agent, you need to create a new directory in the `agents` directory with the agent's name and add an `index.ts` file in it. Next, implement the `LLMAgent` interface and implement the `chat()` method.
 
 ```typescript
-class ChatbotAgent implements LLMAgent {
+class ChatbotAgent implements Agent {
   static readonly NAME: string = __dirname.split("/").pop()!;
 
   async chat(
@@ -21,7 +21,7 @@ class ChatbotAgent implements LLMAgent {
       model: 'gpt-4',
     });
     return {
-      messages: response.messages,
+      message: response.choices[0].message.content,
     };
   }
 }
