@@ -64,6 +64,7 @@
     "react-router-dom": "6.11.2",
     "react-syntax-highlighter": "^15.5.0",
     "react-toastify": "^10.0.5",
+    "rouge": "^1.0.3",
     "sequelize": "^6.37.3",
     "usehooks-ts": "^3.1.0",
     "uuidv4": "^6.2.13",
